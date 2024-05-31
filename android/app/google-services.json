@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "252698512656",
+    "project_id": "snake-b26e5",
+    "storage_bucket": "snake-b26e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252698512656:android:d75615429bf2e21dcbe995",
+        "android_client_info": {
+          "package_name": "com.android.snake"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5vYd_0ZzpSodEgHaGFfYP0R4508w6qWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
