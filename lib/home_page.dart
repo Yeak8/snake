@@ -55,10 +55,10 @@ class _HomePageState extends State<HomePage> {
                   title: Text('Game Over'),
                   content: Column(
                     children: [
-                      Text('Tu Puntuaje Es...' + currentScore.toString()),
+                      Text('Your score is...' + currentScore.toString()),
                       TextField(
-                        decoration: InputDecoration(
-                            hintText: 'Introduce el nombre del jugador'),
+                        decoration:
+                            InputDecoration(hintText: 'Enter player name'),
                       )
                     ],
                   ),
@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                         submitScore();
                         newGame();
                       },
-                      child: Text('Enviar puntuación'),
+                      child: Text('Submit'),
                       color: Colors.yellow,
                     )
                   ],
@@ -80,9 +80,8 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  void submitScore() {
-    //
-  }
+  void submitScore() {}
+
   void newGame() {
     setState(() {
       snakePos = [
@@ -163,12 +162,12 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text('Puntuación actual'),
+                Text('Current Score'),
                 Text(
                   currentScore.toString(),
                   style: TextStyle(fontSize: 25),
                 ),
-                Text('Puntuacion...')
+                Text('...')
               ],
             )),
             Expanded(
@@ -178,22 +177,22 @@ class _HomePageState extends State<HomePage> {
                     if (details.delta.dy < 0 &&
                         currentDirection != snake_Direction.DOWN) {
                       currentDirection = snake_Direction.UP;
-                      print('mover hacia arriba');
+                      print('move up');
                     } else if (details.delta.dy > 0 &&
                         currentDirection != snake_Direction.UP) {
                       currentDirection = snake_Direction.DOWN;
-                      print('mover hacia abajo');
+                      print('move down');
                     }
                   },
                   onHorizontalDragUpdate: (details) {
                     if (details.delta.dx > 0 &&
                         currentDirection != snake_Direction.LEFT) {
                       currentDirection = snake_Direction.RIGHT;
-                      print('mover a la derecha');
+                      print('move left');
                     } else if (details.delta.dx < 0 &&
                         currentDirection != snake_Direction.RIGHT) {
                       currentDirection = snake_Direction.LEFT;
-                      print('mover hacia la izquierda');
+                      print('move left');
                     }
                   },
                   child: GridView.builder(
